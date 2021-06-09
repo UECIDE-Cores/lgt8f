@@ -1,0 +1,3 @@
+lgt/hardware/LGT/avr/cores/lgt8f cores/lgt8f
+debian/core.txt cores/lgt8f
+lgt/hardware/LGT/avr/variants/standard cores/lgt8f

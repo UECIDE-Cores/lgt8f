@@ -1,0 +1,177 @@
+Source: lgt8f
+Section: main
+XBSC-Family: avr
+Priority: extra
+Maintainer: Matt Jenkins <matt@majenko.co.uk>
+XBSC-TieCore: lgt8f
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: http://arduino.cc
+
+Package: lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Cores
+XBSC-SubGroup: LGT8F
+Depends: avr-gcc
+Recommends: 
+Description: Larduino HSP LGT8F Core
+
+Package: lardu-328p48
+Section: main
+Architecture: all
+XBSC-Group: Boards
+XBSC-SubGroup: Logicgreen
+Depends: lgt8f
+Recommends:
+Description: LGT8F328P-LQFP48 MiniEVB
+
+Package: lardu-328p
+Section: main
+Architecture: all
+XBSC-Group: Boards
+XBSC-SubGroup: Logicgreen
+Depends: lgt8f
+Recommends:
+Description: LGT8F328P-LQFP32 MiniEVB
+
+Package: lardu-328e
+Section: main
+Architecture: all
+XBSC-Group: Boards
+XBSC-SubGroup: Logicgreen
+Depends: lgt8f
+Recommends:
+Description: Larduino w/ LGT8F328D
+
+Package: lardu-328s
+Section: main
+Architecture: all
+XBSC-Group: Boards
+XBSC-SubGroup: Logicgreen
+Depends: lgt8f
+Recommends:
+Description: Larduino w/ LGT8F328D-SSOP20
+
+Package: lardu-88ds20
+Section: main
+Architecture: all
+XBSC-Group: Boards
+XBSC-SubGroup: Logicgreen
+Depends: lgt8f
+Recommends:
+Description: Larduino w/ LGT8F88D-SSOP20
+
+
+
+
+Package: libeeprom-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Storage
+XBSC-SubSubGroup: EEPROM
+Provides: EEPROM.h
+Depends: lgt8f
+Description: EEPROM Library for LGT8F
+
+Package: liblarduino-hspexamples-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Examples
+XBSC-SubSubGroup: LGT8F
+Provides: Larduino-UL-HSPExamples.h
+Depends: lgt8f
+Description: Larduino HSP Examples
+
+Package: libpmu-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: System
+XBSC-SubSubGroup: Power
+Provides: PMU.h
+Depends: lgt8f
+Description: Enables power management for LGT8FX8D series based arduino board.
+
+Package: libsoftwareserial-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubGroup: Serial
+Provides: SoftwareSerial.h
+Depends: lgt8f
+Description: SoftwareSerial library for LGT8F
+
+Package: libspi-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubGroup: SPI
+Provides: SPI.h
+Depends: lgt8f
+Description: SPI library for LGT8F
+
+Package: libusbdrv-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubGroup: USB
+Provides: usbdrv.h
+Depends: lgt8f
+Description: USB driver for LGT8F
+
+Package: libvusbdevice-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubGroup: USB
+Provides: VUsbDevice.h
+Depends: lgt8f, libusbdrv-lgt8f
+Description: Virtual USB Device Driver for LGT8F
+
+Package: libvusbkeyboard-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubGroup: USB
+Provides: VUsbKeyboard.h
+Depends: lgt8f, libusbdrv-lgt8f
+Description: Virtual USB Keyboard Driver for LGT8F
+
+Package: libvusbmouse-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubGroup: USB
+Provides: VUsbMouse.h
+Depends: lgt8f
+Description: Virtual USB Mouse Driver for LGT8F
+
+Package: libwdt-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: System
+XBSC-SubSubGroup: Watchdog
+Provides: WDT.h
+Depends: lgt8f
+Description: Watchdog Timer Support for LGT8F
+
+Package: libwire-lgt8f
+Section: main
+Architecture: all
+XBSC-Group: Libraries
+XBSC-SubGroup: Communications
+XBSC-SubSubGroup: I2C
+Provides: Wire.h
+Depends: lgt8f
+Description: Wire library for LGT8F
+

@@ -1,0 +1,2 @@
+debian/boards/lardu-328s boards/Logicgreen
+lgt/hardware/LGT/avr/variants/lgt8fx8ds20/pins_arduino.h boards/Logicgreen/lardu-328s

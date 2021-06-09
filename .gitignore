@@ -1,0 +1,15 @@
+*.substvars
+debian/boards/
+debian/debhelper.log
+debian/lgt/
+debian/libbridge-arduino/
+debian/libesplora-arduino/
+debian/libethernet-arduino/
+debian/libfirmata-arduino/
+debian/libgsm-arduino/
+debian/libkeyboard-arduino/
+debian/libliquidcrystal-arduino/
+debian/libmouse-arduino/
+debian/substvars
+lgt/
+

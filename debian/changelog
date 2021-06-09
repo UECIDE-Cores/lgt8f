@@ -1,0 +1,36 @@
+lgt8f (0.0.6) uecide; urgency=low
+
+  * Removed LTO from core flags
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 20 Sep 2016 21:03:00 +0100
+
+lgt8f (0.0.5) uecide; urgency=low
+
+  * Added libraries
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 20 Sep 2016 21:03:00 +0100
+
+lgt8f (0.0.4) uecide; urgency=low
+
+  * Confirmed correct variant files
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 20 Sep 2016 21:03:00 +0100
+
+lgt8f (0.0.3) uecide; urgency=low
+
+  * Added standard variant files to core
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 20 Sep 2016 21:03:00 +0100
+
+lgt8f (0.0.2) uecide; urgency=low
+
+  * Fix board installation location
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 20 Sep 2016 21:03:00 +0100
+
+lgt8f (0.0.1) uecide; urgency=low
+
+  * Initial Import
+
+ -- Matt Jenkins <matt@majenko.co.uk>  Tue, 20 Sep 2016 21:03:00 +0100
+

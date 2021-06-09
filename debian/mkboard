@@ -1,0 +1,68 @@
+#!/usr/bin/perl
+
+use strict;
+use Data::Dumper;
+
+my $board = shift;
+my $oboard = $board;
+$oboard =~ s/_/-/g;
+
+my $boardData;
+
+open(IN, "<lgt/hardware/LGT/avr/boards.txt");
+while (my $l = <IN>) {
+    chomp($l);
+    $l =~ s/^\s+|\s+$//g;
+    if ($l =~ /^(.*)#/) {
+        $l = $1;
+    }
+    $l =~ s/^\s+|\s+$//g;
+    if ($l eq "") {
+        next;
+    }
+
+    if ($l =~ /^$board\.([^=\s]+)\s*=\s*(.*)$/) {
+        $boardData->{$1} = $2;
+    }
+}
+
+close(IN);
+
+$boardData->{'description'} = $boardData->{'name'};
+$boardData->{'name'} = $oboard;
+$boardData->{'family'} = "avr";
+$boardData->{'core'} = "lgt8f";
+$boardData->{'compiler'} = "avr-gcc";
+$boardData->{'group'} = "Logicgreen";
+
+print Dumper($boardData);
+
+mkdir("debian/boards/$oboard");
+
+open(OUT, "> debian/boards/$oboard/board.txt");
+foreach my $k (sort keys %{$boardData}) {
+    print OUT $k , "=" . $boardData->{$k} . "\n";
+}
+close(OUT);
+
+
+
+#lardu_328p48.name= LGT8F328P-LQFP48 MiniEVB
+#lardu_328p48.upload.tool=avrdude
+#lardu_328p48.upload.protocol=arduino
+#lardu_328p48.upload.maximum_size=29696
+#lardu_328p48.upload.speed=57600
+#lardu_328p48.bootloader.tool=avrdude
+#lardu_328p48.bootloader.high_fuses=0xff
+#lardu_328p48.bootloader.low_fuses=0xff
+#lardu_328p48.bootloader.extended_fuses=0x07
+#lardu_328p48.bootloader.path=lgt8fx8p
+#lardu_328p48.bootloader.file=lgt8fx8p/optiboot_lgt8f328p.hex
+#lardu_328p48.bootloader.unlock_bits=0x3f
+#lardu_328p48.bootloader.lock_bits=0x3f
+#lardu_328p48.build.mcu=atmega328p
+##lardu_328p48.build.f_cpu=32000000L
+#lardu_328p48.build.f_cpu=16000000L
+#lardu_328p48.build.core=lgt8f
+#lardu_328p48.build.variant=lgt8fx8p48
+#lardu_328p48.build.board=AVR_LARDU_328E
